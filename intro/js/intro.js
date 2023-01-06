@@ -36,3 +36,11 @@ calis((a,b)=> a*b,3,3);
 calis((a,b)=> {
   return a* b;
 },3,4);
+// ============ mutabilidad y immutabilidad
+//mutabilidad =  when the items insede of an object can be  change 
+//immutabilidad = when the items insede of an object do not change
+let a = ['d','c','a','b'];
+a.forEach((a)=> console.log(a.toLocaleUpperCase()));
+console.log(a);
+console.log(a.sort())
+console.log(a);
