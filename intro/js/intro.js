@@ -41,6 +41,49 @@ calis((a,b)=> {
 //immutabilidad = when the items insede of an object do not change
 let a = ['d','c','a','b'];
 a.forEach((a)=> console.log(a.toLocaleUpperCase()));
+//console.log(a);
+//console.log(a.sort())
+// ============ map method
+let newArray = a.map((a)=> a.toLocaleUpperCase()).sort();
+console.log(newArray);
 console.log(a);
-console.log(a.sort())
-console.log(a);
+// ============ reduce
+let nums = [3,7,5,9,2,4,6];
+let total = nums.reduce((it,element) =>{
+  return it + element;
+},0);
+console.log("R = ",total);
+// ============ class
+class Car{
+  constructor(name){
+    this.nameCar = name;
+  }
+  getName(){
+    return "The name is "+this.nameCar;
+  }
+}
+const obj1 = new Car("Lambo");
+console.log(obj1.getName());
+// ============ function
+function Car2(name){
+  this.name = name;
+  this.getName = function(){
+    return "The name is "+this.name;
+  }
+}
+const obj2 = new Car2("Mc Laren");
+console.log(obj2.getName());
+// ============ Herencia
+
+class Verificacion extends Car{
+  constructor(name,price){
+    super(name);
+    this.price = price;
+  }
+  getInfoDad(){
+    return "The price for "+ super.getName()+" cost "+this.price; 
+  }
+}
+
+const obj3 = new Verificacion("Audi",5000);
+console.log(obj3.getInfoDad());
